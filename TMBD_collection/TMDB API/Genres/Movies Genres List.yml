@@ -1,0 +1,24 @@
+info:
+  name: Movies Genres List
+  type: http
+  seq: 1
+
+http:
+  method: get
+  url: https://api.themoviedb.org/3/genre/movie/list?language=en
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZWMyM2NiOGRkYWUwOTBkYzI1NzQ1NTFhZDUxNTA0MiIsIm5iZiI6MTY1ODA1MDA3MC41ODksInN1YiI6IjYyZDNkNjE2Y2NiMTVmMDA0ZjQ4MmNkNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8uE0MTtWjfBaP_TT58FNDjyRrooD0uweGaZq4kjueCw
+    - name: accept
+      value: application/json
+  params:
+    - name: language
+      value: en
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

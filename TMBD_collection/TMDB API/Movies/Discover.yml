@@ -1,0 +1,36 @@
+info:
+  name: Discover
+  type: http
+  seq: 1
+
+http:
+  method: get
+  url: https://api.themoviedb.org/3/discover/movie?include_adult=true&include_video=false&language=en-US&page=3&sort_by=popularity.desc
+  headers:
+    - name: Authorization
+      value: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZWMyM2NiOGRkYWUwOTBkYzI1NzQ1NTFhZDUxNTA0MiIsIm5iZiI6MTY1ODA1MDA3MC41ODksInN1YiI6IjYyZDNkNjE2Y2NiMTVmMDA0ZjQ4MmNkNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8uE0MTtWjfBaP_TT58FNDjyRrooD0uweGaZq4kjueCw
+    - name: accept
+      value: application/json
+  params:
+    - name: include_adult
+      value: "true"
+      type: query
+    - name: include_video
+      value: "false"
+      type: query
+    - name: language
+      value: en-US
+      type: query
+    - name: page
+      value: "3"
+      type: query
+    - name: sort_by
+      value: popularity.desc
+      type: query
+  auth: inherit
+
+settings:
+  encodeUrl: false
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
